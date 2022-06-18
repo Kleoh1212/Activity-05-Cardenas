@@ -21,24 +21,41 @@ def main():
     opt = int(input("Select Action: "))
   
     if opt == 1:
+        Grayscale()    
+    elif opt == 2:
+       PixelVal() 
+    elif opt == 3:
+        ModifyPV()
+    elif opt == 4:
+        imgDim()
+    elif opt == 5:
+        PixelCount()
+       
+    elif opt == 6:
+        ImgDataType()
+    elif opt == 0:
+        exit()
+    else:
+        print("Please try again.")
+        main()   
+
+    def Grayscale():
         imgLen = len(img.shape)
         if imgLen >= 3:
             cv2.imshow("colored", img)
             cv2.waitKey(0)
             main()
         else:
-            print("grayscale")
+            print("Grayscale")
             main()
-
-    elif opt == 2:
-        
+    def PixelVal():
         x = int(input("for x axis: "))
         y = int(input("for y axis: "))
         color = int(input("BGR selection: [0. BLUE] [1. GREEN] [2. RED]: "))
         print(img.item(x, y, color))
         main()
-    
-    elif opt == 3:
+
+    def ModifyPV():
         x = int(input("for x axis: "))
         y = int(input("for y axis: "))
         print(img[x, y])
@@ -58,8 +75,7 @@ def main():
         cv2.imshow("Colored",img)
         cv2.waitKey(0)
         main()  
-    
-    elif opt == 4:
+    def imgDim():
         x = 300
         y = 250
         print(img.shape)
@@ -75,8 +91,8 @@ def main():
             print("Out of boundaries")
         cv2.waitKey(0)
         main()
-    
-    elif opt == 5:
+
+    def PixelCount():
         x = 300
         y = 250
         fixedValue = x * y
@@ -92,15 +108,9 @@ def main():
         else:
             print("EQUA:L")
         main()
-    
-    elif opt == 6:
+    def ImgDataType():
         print(f"image data type is: {img.dtype}")
         main()
-
-    elif opt == 0:
-        exit()
-    else:
-        print("Please try again.")
-        main()   
+  
     if __name__ == "__main__":
         main()
