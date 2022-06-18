@@ -112,5 +112,3 @@ def main():
         print(f"image data type is: {img.dtype}")
         main()
   
-    if __name__ == "__main__":
-        main()
