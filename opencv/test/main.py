@@ -12,6 +12,7 @@ def main():
        1. Accept/load colored img. Grayscale should be rejected.
        2. Output a pixel value.
        3. Modify a pixel value.
+       
        4. Set img dimensions. Within boundaries or not.
        5. Set img total pixel count. Higher or lower than the set pixel.
        6. Show the currently loaded image's data type.
