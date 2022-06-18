@@ -102,4 +102,5 @@ def main():
     else:
         print("Please try again.")
         main()   
-
+    if __name__ == "__main__":
+        main()
