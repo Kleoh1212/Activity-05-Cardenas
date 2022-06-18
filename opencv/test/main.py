@@ -2,7 +2,7 @@ import cv2
 import numpy
 
 
-img = cv2.imread('1.jpg')
+
 
 
 def main():
@@ -39,22 +39,27 @@ def main():
         main()   
 
     def Grayscale():
+        img = cv2.imread('1.jpg')
         imgLen = len(img.shape)
         if imgLen >= 3:
-            cv2.imshow("colored", img)
+            cv2.imshow("colored")
             cv2.waitKey(0)
             main()
         else:
             print("Grayscale")
             main()
     def PixelVal():
+        img = cv2.imread('1.jpg')
+        print("Count Pixel Value")
         x = int(input("for X axis: "))
         y = int(input("for Y axis: "))
         color = int(input("BGR selection: [BLUE] [GREEN] [RED]: "))
         print(img.item(x, y, color))
+        cv2.waitKey(0)
         main()
 
     def ModifyPV():
+        global img
         x = int(input("for x axis: "))
         y = int(input("for y axis: "))
         print(img[x, y])
@@ -110,4 +115,5 @@ def main():
     def ImgDataType():
         print("image data type is: {img.dtype}")
         main()
-  
+if __name__  == ("__main__"):
+    main()
