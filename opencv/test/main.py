@@ -18,6 +18,7 @@ def main():
        6. Show the currently loaded image's data type.
        0. Close Window
        """)
+
     opt = int(input("Select Action: "))
   
     if opt == 1:
@@ -30,7 +31,6 @@ def main():
         imgDim()
     elif opt == 5:
         PixelCount()
-       
     elif opt == 6:
         ImgDataType()
     elif opt == 0:
@@ -49,9 +49,9 @@ def main():
             print("Grayscale")
             main()
     def PixelVal():
-        x = int(input("for x axis: "))
-        y = int(input("for y axis: "))
-        color = int(input("BGR selection: [0. BLUE] [1. GREEN] [2. RED]: "))
+        x = int(input("for X axis: "))
+        y = int(input("for Y axis: "))
+        color = int(input("BGR selection: [BLUE] [GREEN] [RED]: "))
         print(img.item(x, y, color))
         main()
 
@@ -109,6 +109,6 @@ def main():
             print("EQUA:L")
         main()
     def ImgDataType():
-        print(f"image data type is: {img.dtype}")
+        print("image data type is: {img.dtype}")
         main()
   
