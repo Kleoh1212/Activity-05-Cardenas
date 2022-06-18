@@ -1,10 +1,6 @@
 import cv2
 import numpy
 
-
-
-
-
 def main():
     print("""
        ACTIVITY #5:
