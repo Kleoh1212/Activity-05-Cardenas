@@ -40,6 +40,7 @@ def main():
 
     def Grayscale():
         img = cv2.imread('1.jpg')
+        print("Accept/load colored img. Grayscale should be rejected.")
         imgLen = len(img.shape)
         if imgLen >= 3:
             cv2.imshow("colored")
@@ -50,7 +51,7 @@ def main():
             main()
     def PixelVal():
         img = cv2.imread('1.jpg')
-        print("Count Pixel Value")
+        print("Output a pixel value.")
         x = int(input("for X axis: "))
         y = int(input("for Y axis: "))
         color = int(input("BGR selection: [BLUE] [GREEN] [RED]: "))
@@ -59,7 +60,8 @@ def main():
         main()
 
     def ModifyPV():
-        global img
+        img = cv2.imread('1.jpg')
+        print(" Modify a pixel value.")
         x = int(input("for x axis: "))
         y = int(input("for y axis: "))
         print(img[x, y])
@@ -80,6 +82,8 @@ def main():
         cv2.waitKey(0)
         main()  
     def imgDim():
+        img = cv2.imread('1.jpg')
+        print(" Set img dimensions. Within boundaries or not.")
         x = 300
         y = 250
         print(img.shape)
@@ -97,6 +101,8 @@ def main():
         main()
 
     def PixelCount():
+        img = cv2.imread('1.jpg')
+        print(" Set img total pixel count. Higher or lower than the set pixel.")
         x = 300
         y = 250
         fixedValue = x * y
@@ -113,7 +119,9 @@ def main():
             print("EQUA:L")
         main()
     def ImgDataType():
-        print("image data type is: {img.dtype}")
+        img = cv2.imread('1.jpg')
+        print("Show the currently loaded image's data type.")
+        print("Image data type is: {img.dtype}")
         main()
 if __name__  == ("__main__"):
     main()
